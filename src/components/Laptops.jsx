@@ -50,9 +50,9 @@ const Laptops = () => {
           products.map((provider) => (
             <div key={provider.id} className="product-card">
               <img src={provider.imagePath} alt={provider.name} />
-              <h4>{provider.name}</h4>
-              <p>Domain: {provider.domain}</p>
-              <p>Mobile: {provider.mobile}</p>
+              <h4 style={{ color: "black" }}>{provider.name}</h4>
+              <p style={{ color: "black" }}>Domain: {provider.domain}</p>
+              <p style={{ color: "black" }}>Mobile: {provider.mobile}</p>
               <button onClick={() => handleAddToCart(provider)}>Hire</button>
             </div>
           ))
