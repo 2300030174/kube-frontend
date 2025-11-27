@@ -13,8 +13,12 @@ const Computers = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const data = await getProducts("computers"); // Fetch only computer category
-      setProducts(data);
+      try {
+        const data = await getProducts("computers"); // API fetch
+        setProducts(data);
+      } catch (err) {
+        console.error("Failed to fetch products:", err);
+      }
     };
     fetchProducts();
   }, []);
@@ -28,7 +32,7 @@ const Computers = () => {
     }
 
     addToCart(product);
-    navigate("/cart"); // Redirect to cart page after adding product
+    navigate("/cart");
   };
 
   return (
@@ -39,7 +43,10 @@ const Computers = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={`${BASE_URL}/api/products/images/${product.imagePath}`}
+                // Display inline base64 if present, fallback to API URL
+                src={product.imagePath.startsWith("data:") 
+                      ? product.imagePath 
+                      : `${BASE_URL}/api/products/images/${product.imagePath}`}
                 alt={product.name}
               />
               <h4>{product.name}</h4>
@@ -58,4 +65,3 @@ const Computers = () => {
 };
 
 export default Computers;
-
