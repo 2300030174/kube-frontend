@@ -43,7 +43,7 @@ const Computers = () => {
 
   return (
     <div className="product-container">
-      <h2>Computers</h2>
+      <h2>Repair services</h2>
       <div className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
