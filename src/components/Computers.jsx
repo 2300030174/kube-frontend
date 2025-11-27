@@ -49,8 +49,8 @@ const Computers = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.imagePath} alt={product.name} />
-              <h4>{product.name}</h4>
-              <p>${product.price.toFixed(2)}</p>
+              <h4 style={{ color: "black" }}>{product.name}</h4>
+              <p style={{ color: "black" }}>${product.price.toFixed(2)}</p>
               <button onClick={() => handleAddToCart(product)}>
                 Add to Cart
               </button>
