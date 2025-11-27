@@ -33,7 +33,7 @@ const HomePage = () => {
     <div className="container">
       {/* Header */}
       <div className="header">
-        <h1>E-Commerce</h1>
+        <h1>Home Services</h1>
         <div className="header-right">
           {isAuthenticated ? (
             <div className="profile-menu">
@@ -53,7 +53,7 @@ const HomePage = () => {
           ) : (
             <>
               <Link to="/login"><button>Login</button></Link>
-              <Link to="/signup"><button>SignUp</button></Link>
+              <Link to="/signup"><button>Sign Up</button></Link>
             </>
           )}
         </div>
@@ -66,16 +66,13 @@ const HomePage = () => {
             <Link to="/about-us">About Us</Link>
           </li>
           <li>
-            <Link to="/computers">Computers</Link>
+            <Link to="/computers">Repair Services</Link>
           </li>
           <li>
-            <Link to={isAuthenticated ? "/mobiles" : "/login"}>Mobiles</Link>
+            <Link to="/mobiles">Cleaning Services</Link>
           </li>
           <li>
-            <Link to={isAuthenticated ? "/laptops" : "/login"}>Laptops</Link>
-          </li>
-          <li>
-            <Link to={isAuthenticated ? "/pendrives" : "/login"}>Pendrives</Link>
+            <Link to="/laptops">Hire Service Providers</Link>
           </li>
         </ul>
       </div>
@@ -86,7 +83,7 @@ const HomePage = () => {
       </div>
 
       {/* Footer */}
-      <div className="footer">@ copyright E-Commerce</div>
+      <div className="footer">@ copyright Home Services</div>
     </div>
   );
 };
