@@ -17,15 +17,15 @@ import Orders from './components/Orders';
 
 function App() {
   return (
-    <BrowserRouter basename="/ecommerce">
+    <BrowserRouter basename="/homeservices">
       <Routes>
         <Route path="/" element={<HomePage />}>
           <Route index element={<AboutUs />} />
           <Route path="home" element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
-          <Route path="computers" element={<Computers />} />
-          <Route path="mobiles" element={<Mobiles />} />
-          <Route path="laptops" element={<Laptops />} />
+          <Route path="repair-services" element={<Computers />} />
+          <Route path="cleaning-services" element={<Mobiles />} />
+          <Route path="hire-service-providers" element={<Laptops />} />
           <Route path="pendrives" element={<Pendrives />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
