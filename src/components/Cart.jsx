@@ -15,9 +15,9 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>Shopping Cart</h2>
+      <h2 style={{ color: "black" }}>Shopping Cart</h2>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty</p>
+        <p style={{ color: "black" }}>Your cart is empty</p>
       ) : (
         <>
           {cartItems.map((item) => (
@@ -26,8 +26,8 @@ const Cart = () => {
                 src={`${BASE_URL}/api/products/images/${item.imagePath}`}
                 alt={item.name}
               />
-              <h4>{item.name}</h4>
-              <p>${item.price}</p>
+              <h4 style={{ color: "black" }}>{item.name}</h4>
+              <p style={{ color: "black" }}>${item.price}</p>
               <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </div>
           ))}
