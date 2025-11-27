@@ -30,13 +30,6 @@ const Computers = () => {
   const navigate = useNavigate();
 
   const handleAddToCart = (product) => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      alert("Please login to add items to the cart!");
-      navigate("/login");
-      return;
-    }
-
     addToCart(product);
     navigate("/cart");
   };
